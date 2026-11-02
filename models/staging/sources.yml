@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: shop
+    description: Raw shop data, loaded into BigQuery by PipeKeel.
+    schema: analytics
+    tables:
+      - name: shop_orders
+        description: Every shop order, merged on order_id by the "Shop orders to BigQuery" pipeline.

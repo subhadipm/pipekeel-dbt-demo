@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: city_summary
+    description: Orders and paid revenue per city, for the sales dashboard.
+    columns:
+      - name: city
+        description: The city.
+        data_tests: [unique, not_null]
+      - name: orders
+        description: All orders from the city.
+      - name: paid_orders
+        description: Orders with status PAID.
+      - name: paid_revenue
+        description: The total of the paid orders.
+      - name: paid_share
+        description: Paid orders as a share of all orders (0 to 1).

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: Orders, cleaned. One row per order.
+    columns:
+      - name: order_id
+        description: The order's id in the shop.
+        data_tests: [unique, not_null]
+      - name: city
+        description: Where the order ships, in title case.
+        data_tests: [not_null]
+      - name: status
+        description: The order's status, upper-case (e.g. PAID).
+      - name: amount
+        description: The order's total.
